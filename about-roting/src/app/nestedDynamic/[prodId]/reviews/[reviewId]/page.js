@@ -1,5 +1,11 @@
+import { notFound } from "next/navigation";
+
 export default function ReviewDetails({ params }) {
   const { prodId, reviewId } = params;
+
+  if (parseInt(reviewId) > 1000) {
+    notFound();
+  }
 
   return (
     <div>
