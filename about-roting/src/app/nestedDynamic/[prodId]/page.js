@@ -1,3 +1,10 @@
+// For dynmaic meta data generateMetadata is fixed function name
+export const generateMetadata = ({ params }) => {
+  return {
+    title: `Product ${params.prodId}`,
+  };
+};
+
 export default function ProductDetails({ params }) {
   const { prodId } = params;
 
